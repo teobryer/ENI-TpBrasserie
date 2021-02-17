@@ -18,6 +18,21 @@ public class Brasserie {
 		this.adresse = adresse;
 		this.nom = nom;
 	}
+	
+	public Brasserie( String codePostal, String region, String adresse, String nom) {
+		super();
+
+		this.codePostal = codePostal;
+		this.region = region;
+		this.adresse = adresse;
+		this.nom = nom;
+	}
+	@Override
+	public String toString() {
+		return "Brasserie [idBrasserie=" + idBrasserie + ", codePostal=" + codePostal + ", region=" + region
+				+ ", adresse=" + adresse + ", nom=" + nom + "]";
+	}
+
 	public int getIdBrasserie() {
 		return idBrasserie;
 	}

@@ -39,6 +39,12 @@ public class Biere {
 	public int getIdBiere() {
 		return idBiere;
 	}
+	@Override
+	public String toString() {
+		return "Biere [idBiere=" + idBiere + ", nom=" + nom + ", brasserie=" + brasserie + ", type=" + type
+				+ ", dateInsert=" + dateInsert.getTime() + "]";
+	}
+
 	public void setIdBiere(int idBiere) {
 		this.idBiere = idBiere;
 	}

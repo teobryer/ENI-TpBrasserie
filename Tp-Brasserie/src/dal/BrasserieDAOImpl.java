@@ -89,7 +89,7 @@ public class BrasserieDAOImpl implements DAO<Brasserie> {
 			stmt.setString(1, b.getCodePostal());
 			stmt.setString(2, b.getRegion());
 			stmt.setString(3, b.getAdresse());
-			stmt.setString(3, b.getNom());
+			stmt.setString(4, b.getNom());
 			
 			stmt.setInt(5, b.getIdBrasserie());
 
@@ -111,7 +111,7 @@ public class BrasserieDAOImpl implements DAO<Brasserie> {
 			stmt.setString(1, b.getCodePostal());
 			stmt.setString(2, b.getRegion());
 			stmt.setString(3, b.getAdresse());
-			stmt.setString(3, b.getNom());
+			stmt.setString(4, b.getNom());
 			
 			
 
@@ -127,7 +127,7 @@ public class BrasserieDAOImpl implements DAO<Brasserie> {
 			System.out.println(generatedKey);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new DALException("Problème dans l'insertion d'une bière");
+			throw new DALException("Problème dans l'insertion d'une brasseroe");
 		}
 	}
 

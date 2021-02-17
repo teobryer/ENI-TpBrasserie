@@ -22,7 +22,7 @@ public class BiereDAOImpl implements DAO<Biere> {
 	private String SELECT_ALL = "  USE BRASSERIE_DB SELECT * FROM Biere";
 	private String UPDATE = "  USE BRASSERIE_DB UPDATE Biere SET nom = ? ,idBrasserie = ? ,type = ? ,dateInsert = ?  WHERE idBiere= ?";
 	private String INSERT = "  USE BRASSERIE_DB INSERT INTO Biere ( nom  ,idBrasserie ,type  ,dateInsert ) VALUES (?,?,?,?)";
-	private String DELETE = "   USE BRASSERIE_DB DELETE FROM Biere WHERE idBrasserie= ?";
+	private String DELETE = "   USE BRASSERIE_DB DELETE FROM Biere WHERE idBiere= ?";
 
 	@Override
 	public Biere selectById(int id) throws DALException {
@@ -38,13 +38,13 @@ public class BiereDAOImpl implements DAO<Biere> {
 
 				int idBiere = rs.getInt("idBiere");
 				String nom = rs.getString("nom");
-				// Brasserie brasserie =
+				Brasserie brasserie = DAOFact.getBrasserieDAO().selectById(rs.getInt("idBrasserie"));
 				String type = rs.getString("type");
 
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("daterInsert"));
+				calendar.setTime(rs.getDate("dateInsert"));
 
-				biere = new Biere(idBiere, nom, null, type, calendar);
+				biere = new Biere(idBiere, nom, brasserie, type, calendar);
 
 			}
 
@@ -69,13 +69,13 @@ public class BiereDAOImpl implements DAO<Biere> {
 
 				int idBiere = rs.getInt("idBiere");
 				String nom = rs.getString("nom");
-				// Brasserie brasserie =
+				Brasserie brasserie = DAOFact.getBrasserieDAO().selectById(rs.getInt("idBrasserie"));
 				String type = rs.getString("type");
 
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("daterInsert"));
+				calendar.setTime(rs.getDate("dateInsert"));
 
-				listBiere.add( new Biere(idBiere, nom, null, type, calendar));
+				listBiere.add( new Biere(idBiere, nom, brasserie, type, calendar));
 				
 
 			}
