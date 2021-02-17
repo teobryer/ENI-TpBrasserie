@@ -10,12 +10,26 @@ public class Biere {
 	private String type;
 	private Calendar dateInsert;
 	
-	
-	
-	
+	/**
+	 * Constructeur
+	 * @param idBiere idBiere
+	 * @param nom nom bière
+	 * @param brasserie brasserie de la bière
+	 * @param type type de bière
+	 * @param dateInsert date d'ajout de la bière
+	 */
 	public Biere(int idBiere, String nom, Brasserie brasserie, String type, Calendar dateInsert) {
 		super();
 		this.idBiere = idBiere;
+		this.nom = nom;
+		this.brasserie = brasserie;
+		this.type = type;
+		this.dateInsert = dateInsert;
+	}
+	
+	public Biere( String nom, Brasserie brasserie, String type, Calendar dateInsert) {
+		super();
+		
 		this.nom = nom;
 		this.brasserie = brasserie;
 		this.type = type;
