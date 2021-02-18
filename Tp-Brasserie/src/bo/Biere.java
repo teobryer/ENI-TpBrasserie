@@ -9,7 +9,18 @@ public class Biere {
 	private Brasserie brasserie;
 	private String type;
 	private Calendar dateInsert;
+	private int note;
 	
+	
+	
+	public int getNote() {
+		return note;
+	}
+
+	public void setNote(int note) {
+		this.note = note;
+	}
+
 	/**
 	 * Constructeur
 	 * @param idBiere idBiere
@@ -25,8 +36,21 @@ public class Biere {
 		this.brasserie = brasserie;
 		this.type = type;
 		this.dateInsert = dateInsert;
+		this.note = 0;
 	}
 	
+	
+	
+	public Biere(int idBiere, String nom, Brasserie brasserie, String type, Calendar dateInsert, int note) {
+		super();
+		this.idBiere = idBiere;
+		this.nom = nom;
+		this.brasserie = brasserie;
+		this.type = type;
+		this.dateInsert = dateInsert;
+		this.note = note;
+	}
+
 	public Biere( String nom, Brasserie brasserie, String type, Calendar dateInsert) {
 		super();
 		
@@ -34,6 +58,7 @@ public class Biere {
 		this.brasserie = brasserie;
 		this.type = type;
 		this.dateInsert = dateInsert;
+		this.note = 0;
 	}
 	
 	public int getIdBiere() {
