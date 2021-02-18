@@ -12,4 +12,8 @@ public class DAOFact {
 	public static DAO<Biere> getBiereDAO() {
 		return new BiereDAOImpl();
 	}
+	
+	public static BlackList getBlackList() {
+		return new BlackList();
+	}
 }

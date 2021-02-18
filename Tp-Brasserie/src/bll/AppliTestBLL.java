@@ -1,5 +1,7 @@
 package bll;
 
+import java.util.Calendar;
+
 import bo.Biere;
 import dal.DALException;
 
@@ -35,8 +37,40 @@ public class AppliTestBLL {
 		}
 		
 		
+		try {
+			for (Biere biereBrasserie1 : managerBrasserie.recupererBiereByBrasserie(managerBrasserie.brasserieById(2))) {
+				System.out.println(biereBrasserie1.toString());
+			}
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
+		try {
+			for (Biere biereBretagne : managerBrasserie.recupererBiereByRegion("Bretagne")) {
+				System.out.println(biereBretagne.toString());
+			}
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("BIERE BLONDES  : ");
+		try {
+			for (Biere biereBretagne : managerBrasserie.recupererBiereByType("Blonde")) {
+				System.out.println(biereBretagne.toString());
+			}
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			managerBrasserie.insererBiere(	new Biere("Maurice1", managerBrasserie.brasserieById(1) , "Ambré", Calendar.getInstance()));
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

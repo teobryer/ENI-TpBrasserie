@@ -2,6 +2,9 @@ package bo;
 
 import java.util.Calendar;
 
+import dal.DALException;
+import dal.DAOFact;
+
 public class Biere {
 
 	private int idBiere;
@@ -56,6 +59,16 @@ public class Biere {
 		
 		this.nom = nom;
 		this.brasserie = brasserie;
+		this.type = type;
+		this.dateInsert = dateInsert;
+		this.note = 0;
+	}
+	
+	public Biere( String nom, int idBrasserie, String type, Calendar dateInsert) throws DALException {
+		super();
+		
+		this.nom = nom;
+		this.brasserie = DAOFact.getBrasserieDAO().selectById(idBrasserie);
 		this.type = type;
 		this.dateInsert = dateInsert;
 		this.note = 0;

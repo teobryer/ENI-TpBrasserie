@@ -22,8 +22,28 @@ public interface IBrasserieManager {
 
 	void noterBiere(Biere biere, int note) throws DALException;
 
+	/// BRASSERIE CRUD
+
+	Brasserie brasserieById(int id) throws DALException;
+
+	List<Brasserie> recupererBrasseries() throws DALException;
+
+	void insererBrasserie(Brasserie b) throws DALException;
+
+	void mettreAJourBrasserie(Brasserie b) throws DALException;
+
+	void supprimerBrasserie(Brasserie b) throws DALException;
+
+	/// BIERES CRUD
+
 	Biere biereById(int id) throws DALException;
-	
+
 	List<Biere> recupererBieres() throws DALException;
+
+	void insererBiere(Biere b) throws DALException;
+
+	void mettreAJourBiere(Biere b) throws DALException;
+
+	void supprimerBiere(Biere b) throws DALException;
 
 }

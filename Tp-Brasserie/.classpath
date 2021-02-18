@@ -7,5 +7,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="F:/#ENI/sqljdbc42.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Téo/Downloads/WindowBuilder/Module 06 - Fiches Démo 03 et 04 - Utiliser WindowBuilder/ressources/ressources/jgoodies-common-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Téo/Downloads/WindowBuilder/Module 06 - Fiches Démo 03 et 04 - Utiliser WindowBuilder/ressources/ressources/jgoodies-forms-1.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
