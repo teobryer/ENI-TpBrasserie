@@ -1,4 +1,6 @@
 /bin/
 
 
+*.properties
+
 settings.properties
